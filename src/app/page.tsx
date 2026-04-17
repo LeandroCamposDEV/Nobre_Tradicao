@@ -1,113 +1,161 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/Button";
+import { Section } from "@/components/ui/Section";
+import { ShieldCheck, PenTool, Crown, Clock } from "lucide-react";
+import { FadeIn } from "@/components/ui/FadeIn";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
+    <>
+      {/* Hero Section */}
+      <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden rounded-bl-[3rem] md:rounded-bl-[6rem] bg-wood-dark">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
+          src="/images/home_hero_1776386458264.jpg"
+          alt="Cozinha de alto padrão"
+          fill
           priority
+          className="object-cover object-center"
+          sizes="100vw"
         />
-      </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-black/90 via-primary-black/70 to-transparent"></div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full mt-24 md:mt-20">
+          <div className="max-w-2xl px-2 sm:px-0">
+            <FadeIn delay={0.2} direction="up">
+              <h1 className="text-4xl md:text-5xl lg:text-7xl mb-6 leading-tight">
+                A Arte de Morar <br />
+                <span className="text-wood-gold">Com Sofisticação.</span>
+              </h1>
+            </FadeIn>
+            <FadeIn delay={0.4} direction="up">
+              <p className="text-lg md:text-xl text-primary-gray/90 mb-10 text-balance leading-relaxed">
+                Há 15 anos transformando madeira em patrimônio. Projetos exclusivos em cozinhas, 
+                closets e ambientes corporativos para quem não abre mão do mais alto padrão.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.6} direction="up">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/contato">
+                  <Button size="lg" className="w-full sm:w-auto">Solicitar Orçamento</Button>
+                </Link>
+                <Link href="/portfolio">
+                  <Button variant="outline" size="lg" className="w-full sm:w-auto">Ver Portfólio</Button>
+                </Link>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+      {/* Differentials Section */}
+      <Section className="bg-[#050505] border-y border-wood-dark" id="diferenciais">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl text-wood-gold mb-4">Nossa Essência</h2>
+          <p className="text-primary-gray max-w-2xl mx-auto">
+            Combinamos a tradição da marcenaria artesanal com a precisão da tecnologia suíça
+            para entregar móveis que atravessam gerações.
           </p>
-        </a>
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            {
+              icon: <Crown className="w-10 h-10 text-wood-gold mb-4" />,
+              title: "Alto Padrão",
+              desc: "Acabamentos impecáveis e materiais nobres selecionados rigorosamente para garantir exclusividade."
+            },
+            {
+              icon: <PenTool className="w-10 h-10 text-wood-gold mb-4" />,
+              title: "Design Autoral",
+              desc: "Projetos 100% personalizados que traduzem a sua identidade e estilo de vida em cada detalhe."
+            },
+            {
+              icon: <ShieldCheck className="w-10 h-10 text-wood-gold mb-4" />,
+              title: "Durabilidade",
+              desc: "Ferragens importadas e técnicas construtivas avançadas asseguram móveis para uma vida inteira."
+            },
+            {
+              icon: <Clock className="w-10 h-10 text-wood-gold mb-4" />,
+              title: "Pontualidade",
+              desc: "Respeito irrestrito aos prazos estabelecidos. Sua obra entregue no tempo combinado, sem imprevistos."
+            }
+          ].map((item, i) => (
+            <div key={i} className="p-6 bg-primary-black border border-wood-dark rounded-sm hover:-translate-y-2 transition-transform duration-300">
+              {item.icon}
+              <h3 className="text-xl mb-3 text-white">{item.title}</h3>
+              <p className="text-primary-gray/80 text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      {/* Mini Portfolio / Highlight */}
+      <Section id="destaques">
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          <div className="w-full lg:w-1/2 relative min-h-[500px]">
+            <Image
+              src="/images/home_destaque_1776386473747.png"
+              alt="Closet de luxo"
+              fill
+              className="object-cover rounded-tl-[4rem] rounded-br-[4rem]"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 ring-1 ring-inset ring-wood-dark/20 rounded-tl-[4rem] rounded-br-[4rem]"></div>
+            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-wood-dark -z-10 hidden md:block"></div>
+          </div>
+          <div className="w-full lg:w-1/2">
+            <h2 className="text-3xl md:text-5xl mb-6">A materialização da <span className="text-wood-gold">Excelência</span></h2>
+            <p className="text-primary-gray mb-6 leading-relaxed">
+              Cada ambiente planejado pela Nobre Tradição é o resultado de um estudo profundo de ergonomia,
+              estética e funcionalidade. Não fazemos apenas móveis; criamos cenários para as melhores histórias da sua vida.
+            </p>
+            <p className="text-primary-gray mb-8 leading-relaxed">
+              Nossos closets e dormitórios refletem a intimidade luxuosa que você merece, organizando seus itens mais preciosos
+              como em uma boutique particular.
+            </p>
+            <Link href="/sobre">
+              <span className="inline-flex items-center text-wood-gold font-semibold hover:text-wood-bronze transition-colors group">
+                Conheça nossa história
+                <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
+              </span>
+            </Link>
+          </div>
+        </div>
+      </Section>
+
+      {/* Social Proof */}
+      <Section className="bg-[#050505] border-y border-wood-dark" id="depoimentos">
+        <h2 className="text-center text-3xl md:text-4xl text-wood-gold mb-16">O que dizem nossos clientes</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {
+              text: "A entrega superou todas as expectativas. O refinamento dos acabamentos na minha cozinha é algo indescritível.",
+              author: "Elena Vasconcelos",
+              role: "Arquiteta"
+            },
+            {
+              text: "Profissionalismo do início ao fim. O closet blindado ficou exatamente como o meu projeto pedia. Qualidade suíça.",
+              author: "Roberto Almeida",
+              role: "Empresário"
+            },
+            {
+              text: "Já é o terceiro projeto que faço com a Nobre Tradição para o meu escritório. Nunca decepcionam no prazo e na classe.",
+              author: "Mariana Silva",
+              role: "Advogada"
+            }
+          ].map((test, i) => (
+            <div key={i} className="p-8 bg-primary-black border border-wood-dark relative">
+              <span className="absolute top-4 left-4 text-4xl text-wood-gold/20 font-serif">&quot;</span>
+              <p className="text-primary-gray/90 italic mb-6 relative z-10">&quot;{test.text}&quot;</p>
+              <div>
+                <strong className="block text-white font-serif">{test.author}</strong>
+                <span className="text-sm text-wood-gold">{test.role}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+    </>
   );
 }
