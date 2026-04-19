@@ -93,7 +93,7 @@ export default function Home() {
       {/* Mini Portfolio / Highlight */}
       <Section id="destaques">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
-          <div className="w-full lg:w-1/2 relative min-h-[500px]">
+          <div className="w-full lg:w-1/2 relative min-h-[350px] sm:min-h-[450px] lg:min-h-[500px]">
             <Image
               src="/images/home_destaque_1776386473747.png"
               alt="Closet de luxo"

@@ -53,7 +53,7 @@ export default function Servicos() {
         <div className="space-y-24 md:space-y-32">
           {services.map((svc) => (
             <div key={svc.id} id={svc.id} className={`flex flex-col gap-12 items-center scroll-mt-24 ${svc.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
-              <div className="w-full lg:w-1/2 relative h-[400px] md:h-[500px]">
+              <div className="w-full lg:w-1/2 relative h-[300px] sm:h-[400px] md:h-[500px]">
                 <Image
                   src={svc.img}
                   alt={svc.title}

@@ -24,36 +24,36 @@ export function Navbar() {
               <div className="relative w-10 h-10 md:w-16 md:h-16 flex-shrink-0">
                 <Image src="/images/logo_marcenaria_1776386441913.png" alt="Logo" fill className="object-contain" />
               </div>
-              <span className="font-serif text-base sm:text-xl md:text-3xl font-bold tracking-widest text-wood-gold whitespace-nowrap">
+              <span className="font-serif text-sm sm:text-lg md:text-2xl lg:text-3xl font-bold tracking-wider sm:tracking-widest text-wood-gold whitespace-nowrap">
                 NOBRE TRADIÇÃO
               </span>
             </Link>
           </div>
           
           {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden lg:flex space-x-4 xl:space-x-8">
             {navLinks.map((link) => (
               <Link 
                 key={link.name} 
                 href={link.href}
-                className="text-primary-gray hover:text-wood-gold transition-colors duration-300 text-sm tracking-wide uppercase font-medium"
+                className="text-primary-gray hover:text-wood-gold transition-colors duration-300 text-sm tracking-wide uppercase font-medium whitespace-nowrap"
               >
                 {link.name}
               </Link>
             ))}
           </nav>
           
-          <div className="hidden md:flex items-center">
+          <div className="hidden lg:flex items-center">
             <Link 
               href="/contato"
-              className="bg-wood-gold text-primary-black px-6 py-2 rounded-sm font-semibold hover:bg-wood-bronze transition-colors duration-300"
+              className="bg-wood-gold text-primary-black px-4 xl:px-6 py-2 rounded-sm font-semibold hover:bg-wood-bronze transition-colors duration-300 whitespace-nowrap"
             >
               Fale Conosco
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button 
               onClick={() => setIsOpen(!isOpen)}
               className="text-primary-white hover:text-wood-gold"
@@ -66,7 +66,7 @@ export function Navbar() {
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="md:hidden bg-primary-black border-b border-wood-dark">
+        <div className="lg:hidden bg-primary-black border-b border-wood-dark">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <Link

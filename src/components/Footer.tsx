@@ -6,13 +6,13 @@ export function Footer() {
   return (
     <footer className="bg-[#050505] border-t border-wood-dark pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="col-span-1 md:col-span-1">
-            <Link href="/" className="flex items-center mb-6 space-x-2 md:space-x-4">
-              <div className="relative w-12 h-12 md:w-20 md:h-20 flex-shrink-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
+          <div className="sm:col-span-2 lg:col-span-2">
+            <Link href="/" className="flex items-center mb-6 space-x-3 md:space-x-4">
+              <div className="relative w-14 h-14 md:w-20 md:h-20 flex-shrink-0">
                 <Image src="/images/logo_marcenaria_1776386441913.png" alt="Logo" fill className="object-contain" />
               </div>
-              <span className="font-serif text-xl sm:text-2xl md:text-4xl font-bold tracking-widest text-wood-gold block mt-1">
+              <span className="font-serif text-xl sm:text-2xl lg:text-3xl font-bold tracking-widest text-wood-gold block mt-1">
                 NOBRE TRADIÇÃO
               </span>
             </Link>
@@ -30,7 +30,7 @@ export function Footer() {
             </div>
           </div>
           
-          <div>
+          <div className="lg:col-span-1">
             <h3 className="font-serif text-lg font-semibold text-white mb-4">Navegação</h3>
             <ul className="space-y-3">
               <li><Link href="/" className="text-primary-gray/80 hover:text-wood-gold transition-colors text-sm">Início</Link></li>
@@ -40,7 +40,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="lg:col-span-1">
             <h3 className="font-serif text-lg font-semibold text-white mb-4">Serviços</h3>
             <ul className="space-y-3">
               <li><Link href="/servicos#cozinhas" className="text-primary-gray/80 hover:text-wood-gold transition-colors text-sm">Cozinhas Planejadas</Link></li>
@@ -49,7 +49,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="lg:col-span-1">
             <h3 className="font-serif text-lg font-semibold text-white mb-4">Contato</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
@@ -62,7 +62,7 @@ export function Footer() {
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="text-wood-gold mr-3 flex-shrink-0" />
-                <span className="text-primary-gray/80 text-sm">contato@nobretradicao.com.br</span>
+                <span className="text-primary-gray/80 text-sm break-all">contato@nobretradicao.com.br</span>
               </li>
             </ul>
           </div>
@@ -72,8 +72,9 @@ export function Footer() {
           <p className="text-primary-gray/60 text-xs">
             &copy; {new Date().getFullYear()} Marcenaria Nobre Tradição. Todos os direitos reservados.
           </p>
-          <div className="mt-4 md:mt-0">
-            <span className="text-primary-gray/60 text-xs text-center block">Feito com foco em excelência e performance.</span>
+          <div className="mt-4 md:mt-0 flex flex-col items-center md:items-end">
+            <span className="text-primary-gray/60 text-xs text-center md:text-right block">Feito com foco em excelência e performance.</span>
+            <span className="text-primary-gray/50 text-xs text-center md:text-right block mt-1">Desenvolvido por Leandro Campos</span>
           </div>
         </div>
       </div>

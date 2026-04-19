@@ -41,7 +41,7 @@ export default function Sobre() {
           </div>
           <div className="w-full lg:w-1/2">
             <div className="grid grid-cols-2 gap-4">
-              <div className="relative h-64 md:h-80 w-full mt-8 md:mt-12 rounded-tl-[3rem] rounded-br-[3rem] overflow-hidden">
+              <div className="relative h-48 sm:h-64 md:h-80 w-full mt-8 md:mt-12 rounded-tl-[3rem] rounded-br-[3rem] overflow-hidden">
                 <Image 
                   src="/images/sobre_artesanal_1776386487474.png"
                   alt="Trabalho artesanal em madeira"
@@ -50,7 +50,7 @@ export default function Sobre() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
-              <div className="relative h-64 md:h-80 w-full rounded-tr-[3rem] rounded-bl-[3rem] overflow-hidden">
+              <div className="relative h-48 sm:h-64 md:h-80 w-full rounded-tr-[3rem] rounded-bl-[3rem] overflow-hidden">
                 <Image 
                   src="/images/sobre_maquina_1776386501306.png"
                   alt="Maquinário moderno"
